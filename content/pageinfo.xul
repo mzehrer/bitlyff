@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+
+<dialog id="bitlyPageInfo" title="bit.ly Page Info"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept" 
+        onload="bitlyff_PageInfoLoad();"
+        ondialogaccept="if(opener != null)opener.focus(); return true;"
+        buttonpack="center" buttonalign="center">
+
+	<script type="application/x-javascript" src="chrome://bitlyff/content/bitlyff.js" />
+        
+        <label id="title-field" value="bit.ly Page Information"/>
+        <label id="info-field" value="Page info..."/>
+
+	<hbox>
+		<hbox pack="center" align="center" flex="2">
+			<label id="disclaimer_1" value="This extension uses" style="color: #666; font-size: xx-small;" />
+			<label id="disclaimer_2" value="http://bit.ly/go" style="color: #00F; font-size: xx-small; margin-left: 0; text-decoration: underline; cursor: pointer;" onclick="tinyurl_gotoBitlyUrl();" />
+			<label id="disclaimer_3" value="to generate URLs" style="color: #666; font-size: xx-small; margin-left: 0;" />
+		</hbox>
+		<resizer id="windowResizer" dir="bottomright" />
+	</hbox>
+
+</dialog>
