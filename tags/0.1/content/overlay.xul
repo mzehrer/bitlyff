@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay PUBLIC "-//MOZILLA//DTD XUL V1.0//EN" "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<overlay id="bitlyffOverlay"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+  <script type="application/x-javascript" src="chrome://bitlyff/content/bitlyff.js" />
+  
+  <script language="JavaScript">
+    try{window.addEventListener("load", bitlyff_overlayInit, true);}catch(e){}
+  </script>
+
+  <popup id="contentAreaContextMenu">
+    <menuitem id="bitlyff-context-anchor-menu" label="Copy bit.ly url for this link" oncommand="bitlyff_copyCurrentAnchor(this);"/>
+    <menuitem id="bitlyff-context-page-menu" label="Copy bit.ly url for this page" oncommand="bitlyff_copyCurrentPage();"/>
+    <menuitem id="bitlyff-context-page-menu" label="Get bit.ly information for this page" oncommand="bitlyff_getPageInfo();"/>
+  </popup>
+    
+</overlay>
