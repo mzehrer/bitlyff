@@ -14,9 +14,9 @@
   </script>
 
   <popup id="contentAreaContextMenu">
-    <menuitem id="bitlyff-context-anchor-menu" label="Copy bit.ly url for this link" oncommand="bitlyff_copyCurrentAnchor(this);"/>
+    <menuitem id="bitlyff-context-page-menu" label="Get bit.ly information for this page" oncommand="bitlyff_getPageInfo();" class="menuitem-iconic" image="chrome://bitlyff/content/bitlyff.png"/>
     <menuitem id="bitlyff-context-page-menu" label="Copy bit.ly url for this page" oncommand="bitlyff_copyCurrentPage();"/>
-    <menuitem id="bitlyff-context-page-menu" label="Get bit.ly information for this page" oncommand="bitlyff_getPageInfo();"/>
+    <menuitem id="bitlyff-context-anchor-menu" label="Copy bit.ly url for this link" oncommand="bitlyff_copyCurrentAnchor(this);"/>
   </popup>
     
 </overlay>

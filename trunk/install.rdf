@@ -4,10 +4,10 @@
     <Description about="urn:mozilla:install-manifest">
         <em:id>bitlyff@zepan.org</em:id>
         <em:name>bit.lyff</em:name>
-        <em:version>0.1</em:version>
+        <em:version>0.2</em:version>
         <em:description>bit.ly Firefox extension. Shorten Long URLs With bit.ly (http://bit.ly/go)</em:description>
         <em:creator>Michael Zehrer &lt;zehrer@zepan.org&gt;</em:creator>
-        <em:homepageURL>http://zepan.org/bitlyff/</em:homepageURL>
+        <em:homepageURL>http://zepan.org/software/bitlyff/</em:homepageURL>
         <em:type>2</em:type> <!-- type=extension --> 
         <em:iconURL>chrome://bitlyff/content/bitlyff.png</em:iconURL>
 
