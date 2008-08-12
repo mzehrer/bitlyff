@@ -1,0 +1,2 @@
+content bitlyff jar:bitlyff.jar!/content/ xpcnativewrappers=yes
+overlay chrome://browser/content/browser.xul chrome://bitlyff/content/overlay.xul

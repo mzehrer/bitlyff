@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+
+<dialog id="bitlyPageInfo" title="bit.ly Page Info"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" buttons="accept"
+  onload="bitlyff_PageInfoLoad();" ondialogaccept="if(opener != null)opener.focus(); return true;"
+  buttonpack="center" buttonalign="center"
+  flex="2">
+
+  <script type="application/x-javascript" src="chrome://bitlyff/content/bitlyff.js"/>
+
+    <label id="title-field" value="bit.ly Page Information"
+      style="font-size: large; font-weight: bold;"/>
+
+  <!-- <hbox>
+    <hbox pack="center" align="center">
+      <image id="visthumbnail-field" src="chrome://bitlyff/content/bitlyff.js" />
+    </hbox>
+  </hbox> -->
+
+  <groupbox>
+  <caption label="URLs" style="font-weight: bold;"/>    
+  <vbox>
+    <hbox>
+      <vbox>
+        <label control="long-field" value="Long Url:" style="font-weight: bold;"/>
+        <label control="short-field" value="Sort Url:" style="font-weight: bold;"/>
+        <label control="mirror-field" value="Mirror Url:" style="font-weight: bold;"/>
+      </vbox>
+      <vbox>
+        <label id="long-field" value="none" />
+        <label id="short-field" value="none"/>
+        <label id="mirror-field" value="none"/>
+      </vbox>
+      <vbox>
+        <label id="copy-long-field" value="copy" onclick="bitlyff_copyfieldvalue('long-field');" style="color: #00F; text-decoration: underline; cursor: pointer;"/>
+        <label id="copy-short-field" value="copy" onclick="bitlyff_copyfieldvalue('short-field');" style="color: #00F; text-decoration: underline; cursor: pointer;"/>
+        <label id="copy-mirror-field" value="copy" onclick="bitlyff_copyfieldvalue('mirror-field');" style="color: #00F; text-decoration: underline; cursor: pointer;"/>
+      </vbox>
+    </hbox>
+  </vbox>
+  </groupbox>
+  
+  <groupbox>
+  <caption label="Thumbnails" style="font-weight: bold;"/>
+  <vbox>
+    <hbox>
+      <vbox>
+        <label control="thumbnail-small-field" value="Small:" style="font-weight: bold;"/>
+        <label control="thumbnail-medium-field" value="Medium:" style="font-weight: bold;"/>
+        <label control="thumbnail-large-field" value="Large:" style="font-weight: bold;"/>
+      </vbox>
+      <vbox>
+        <label id="thumbnail-small-field" value="none"/>
+        <label id="thumbnail-medium-field" value="none"/>
+        <label id="thumbnail-large-field" value="none"/>
+      </vbox>
+      <vbox>
+        <label id="copy-thumbnail-small-field" value="copy" onclick="bitlyff_copyfieldvalue('thumbnail-small-field');" style="color: #00F; text-decoration: underline; cursor: pointer;"/>
+        <label id="copy-thumbnail-medium-field" value="copy" onclick="bitlyff_copyfieldvalue('thumbnail-medium-field');" style="color: #00F; text-decoration: underline; cursor: pointer;"/>
+        <label id="copy-thumbnail-large-field" value="copy" onclick="bitlyff_copyfieldvalue('thumbnail-large-field');" style="color: #00F; text-decoration: underline; cursor: pointer;"/>
+      </vbox>      
+    </hbox>
+  </vbox>
+  </groupbox>
+  
+
+  <groupbox>
+  <caption label="Clicks" style="font-weight: bold;"/>  
+  <vbox>
+    <hbox>
+      <vbox>
+        <label control="clicks-field" value="Clicks:" style="font-weight: bold;"/>
+      </vbox>
+      <vbox>
+        <label id="clicks-field" value="0"/>
+      </vbox>
+    </hbox>
+  </vbox>
+  
+    <grid id="refgrid">
+    <columns>
+      <column/>
+      <column/>
+    </columns>
+  
+    <rows id="refgridrows">
+      <row>
+        <label control="refgridheadersource-field" value="Referrer Source" style="font-weight: bold;"/>
+        <label control="refgridheaderclicks--field" value="Clicks" style="font-weight: bold;"/>
+      </row>
+    </rows>
+  </grid>
+  
+  </groupbox>
+
+  <hbox>
+    <hbox pack="center" align="center" flex="2">
+      <label id="disclaimer_1" value="This extension uses" style="color: #666; font-size: xx-small;"/>
+      <label id="disclaimer_2" value="http://bit.ly/go"
+        style="color: #00F; font-size: xx-small; margin-left: 0; text-decoration: underline; cursor: pointer;"
+        onclick="bitlyff_gotoUrl('http://bit.ly/go');"/>
+      <label id="disclaimer_3" value="to generate URLs."
+        style="color: #666; font-size: xx-small; margin-left: 0;"/>
+    </hbox>
+  </hbox>
+
+</dialog>
