@@ -18,5 +18,11 @@
     <menuitem id="bitlyff-context-page-menu" label="Copy bit.ly url for this page" oncommand="bitlyff_copyCurrentPage();"/>
     <menuitem id="bitlyff-context-anchor-menu" label="Copy bit.ly url for this link" oncommand="bitlyff_copyCurrentAnchor(this);"/>
   </popup>
+  
+  <statusbar id="status-bar">
+             <statusbarpanel class="statusbarpanel-iconic" id="bitlyff_statusicn"
+                             onclick="bitlyff_getPageInfo();"
+                             src="chrome://bitlyff/content/bitlyff.png" tooltiptext="Get bit.ly information for this page"/>
+  </statusbar>
     
 </overlay>
