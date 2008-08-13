@@ -24,7 +24,7 @@
     <hbox>
       <vbox>
         <label control="long-field" value="Long Url:" style="font-weight: bold;"/>
-        <label control="short-field" value="Sort Url:" style="font-weight: bold;"/>
+        <label control="short-field" value="Short Url:" style="font-weight: bold;"/>
         <label control="mirror-field" value="Mirror Url:" style="font-weight: bold;"/>
       </vbox>
       <vbox>
